@@ -48,6 +48,7 @@ export default function SignIn() {
     },
     {
       onSuccess: async (data) => {
+        api.defaults.headers.common.Authorization = `Bearer ${data.token}`;
         await SecureStore.setItemAsync('token', data.token);
         Toast.show({
           type: 'success',

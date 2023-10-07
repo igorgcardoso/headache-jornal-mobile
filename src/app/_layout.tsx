@@ -1,4 +1,7 @@
+import { api } from '@src/lib/api';
 import { Stack } from 'expo-router';
+import * as SecureStorage from 'expo-secure-store';
+import { useEffect } from 'react';
 import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Toast from 'react-native-toast-message';
@@ -8,6 +11,15 @@ export default function Layout() {
   const queryClient = new QueryClient();
 
   const { top } = useSafeAreaInsets();
+
+  useEffect(() => {
+    async function setToken() {
+      const token = await SecureStorage.getItemAsync('token');
+      api.defaults.headers.common.Authorization = `Bearer ${token}`;
+    }
+
+    setToken();
+  }, []);
 
   return (
     <View

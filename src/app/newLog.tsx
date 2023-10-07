@@ -183,6 +183,7 @@ export default function NewLog() {
     (async () => {
       const token = await SecureStore.getItemAsync('token');
       if (token) {
+        api.defaults.headers.common.Authorization = `Bearer ${token}`;
         setToken(token);
       } else {
         router.push('signIn');
