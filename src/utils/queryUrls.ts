@@ -23,7 +23,7 @@ export const QUERY_URLS = {
     end: (id: string) => `/headaches/${id}/`,
   },
   session: {
-    signIn: () => '/session/sign-in',
+    signIn: () => '/sessions/sign-in',
   },
   stats: {
     get: () => '/stats',
