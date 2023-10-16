@@ -92,7 +92,7 @@ export default function Stats() {
           label="Mean apparent temperature"
           value={stats.meanApparentTemperature!}
         />
-        <LabelValue label="Mean UV Index" value={stats.meanUVIndex!} />
+        <LabelValue label="Mean UV Index" value={stats.meanUvIndex!} />
         <LabelValue
           label="Mean Shortwave Radiation"
           value={stats.meanShortwaveRadiation!}

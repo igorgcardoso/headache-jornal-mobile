@@ -11,7 +11,7 @@ export interface HeadacheStats {
   mostCommonSideName: string | null;
   meanTemperature: number | null;
   meanApparentTemperature: number | null;
-  meanUVIndex: number | null;
+  meanUvIndex: number | null;
   meanShortwaveRadiation: number | null;
   meanMinTemperature: number | null;
   meanMaxTemperature: number | null;
