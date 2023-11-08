@@ -19,6 +19,7 @@ import { useQuery } from 'react-query';
 
 export default function Stats() {
   const [stats, setStats] = useState<HeadacheStats>({} as HeadacheStats);
+
   const { isLoading, refetch } = useQuery(
     QUERY_KEYS.stats(),
     async () => {
@@ -123,7 +124,7 @@ export default function Stats() {
         {isLoading ? (
           <ActivityIndicator size={24} color="#FFF" />
         ) : (
-          <Text className="text-lg font-bold text-white">Recarregar</Text>
+          <Text className="text-lg font-bold text-white">Reload</Text>
         )}
       </TouchableOpacity>
     </View>

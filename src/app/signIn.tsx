@@ -83,6 +83,7 @@ export default function SignIn() {
                   className="w-64 rounded-lg rounded-l-none bg-white p-2"
                   placeholder="jon@doe.com"
                   keyboardType="email-address"
+                  autoCapitalize="none"
                   value={value}
                   onChangeText={onChange}
                   onBlur={onBlur}
@@ -105,6 +106,7 @@ export default function SignIn() {
                 <TextInput
                   className="w-64 rounded-lg rounded-l-none bg-white p-2"
                   placeholder="*******"
+                  autoCapitalize="none"
                   secureTextEntry
                   value={value}
                   onChangeText={onChange}

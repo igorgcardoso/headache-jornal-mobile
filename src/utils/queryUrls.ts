@@ -24,6 +24,7 @@ export const QUERY_URLS = {
   },
   session: {
     signIn: () => '/sessions/sign-in',
+    verify: () => '/sessions/verify',
   },
   stats: {
     get: () => '/stats',
